@@ -14,7 +14,6 @@ public class Unkown implements state {
 		System.out.println(" This Unkown state");
 	}
 
-	@Override
 	public void healthisgood() {
 		// TODO Auto-generated method stub
 		mac.setState(mac.getReady());
@@ -46,5 +45,7 @@ public class Unkown implements state {
 		// TODO Auto-generated method stub
 		
 	}
+
+
 
 }

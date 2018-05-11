@@ -15,7 +15,9 @@ public class machinetest {
 		System.out.println("Enter one of the following : \ncheck is good\ncheck is bad\nservice enabled\nservice disabled");
 		String s = input.nextLine();
 		mac.doAction(s);
-		}	
+		}
+		
+	}
 }
 
-}
+

@@ -2,7 +2,7 @@ package Final_2;
 
 public class machine {
 	state Ready, Unkown, Down, state, Disabled;
-	state states = null;
+	state currentstate;
 
 	public machine() {
 
@@ -11,32 +11,36 @@ public class machine {
 		Unkown = new Unkown(this);
 		Down = new Down(this);
 
-		state = Unkown; // Assingnning the initial state or default state
+		//state = Unkown; // Assingnning the initial state or default state
 	}
 
 	public void setState(state newstate) {
-		this.state = newstate;
+		currentstate = newstate;
 	} // method to that is use to change state
-
-	public void exit() {
-		System.exit(0);
+	
+	
+	public state getstate() {
+		return currentstate;
 	}
+	//public void exit() {
+	//	System.exit(0);
+	//}
 
-	public boolean perform(String a) {
+	public boolean doAction(String a) {
 		if (a == "check is good") {
-			state.healthisgood();
+			currentstate.healthisgood();
 		} else if (a == "check is bad") {
-			 state.healthisbad();
+			currentstate.healthisbad();
 		} else if (a == "check times out") {
-			 state.checktimesout();
+			 currentstate.checktimesout();
 		} else if (a == "service enabled") {
-			 state.serviceenabled();
-		}else if (a == "service disabled") {
-			 state.servicedisabled();
+			 currentstate.serviceenabled();
+		} else if (a == "service disabled") {
+			 currentstate.servicedisabled();
 		}
 		return false;
 	}
-	// stting the value
+	// setting the value
 
 	public void healthisgood() {
 		healthisgood();
@@ -74,8 +78,10 @@ public class machine {
 		state.currentstate();
 	}
 	
-	private String getSerialNum() {
+	/*private String getSerialNum() {
 		return "poptart";
 		
-	}
+	}*/
+	
+	
 }

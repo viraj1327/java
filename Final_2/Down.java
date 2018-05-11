@@ -18,7 +18,7 @@ public class Down implements state {
 	public void healthisgood() {
 		// TODO Auto-generated method stub
 		mac.setState(mac.getReady());
-		System.out.print("You are in Ready state");
+		//System.out.print("You are in Ready state");
 	}
 
 	@Override

@@ -44,5 +44,4 @@ public class Disabled implements state {
 		// TODO Auto-generated method stub
 		
 	}
-
 }

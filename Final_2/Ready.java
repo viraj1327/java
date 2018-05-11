@@ -48,3 +48,4 @@ public Ready(machine newmac) {
 	}
 
 }
+
