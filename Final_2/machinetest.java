@@ -17,3 +17,5 @@ public class machinetest {
 		mac.doAction(s);
 		}	
 }
+
+}
